@@ -1,0 +1,31 @@
+/* * {outline: 1px solid black}i */
+
+body{
+	background-color: lightgray;
+}
+a {
+	color:blue;
+	text-decoration:none;
+}
+
+.nav {
+	background-color: darkgray;
+	display: flex;
+	flex-direction: column;
+	justify-content:flex-end;
+	
+}
+.nav h2:first-child{
+	align-self:center;
+	
+}
+.nav ul{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	align-items:flex-end;
+	align-content:stretch;
+	list-style-type:none;
+}
+
+

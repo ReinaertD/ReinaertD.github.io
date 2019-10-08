@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device width, initial-scale=1.0">
 		<title>Contact Information</title>
-		<link rel="shortcut icon" type="image/png" href="https://img.icons8.com/ios-filled/50/000000/top-view-fish.png"/>
+		<link rel="shortcut icon" type="image/png" href="assets/top-view-fish.png"/>
 	</head>
-	
-<nav>
-	<ul>
-		<li><a href="home.html">Home</a>
-		<li><a href="skills.html">Skills</a>
-		<li><a href="contact.html">Contact</a>
-	</ul>
-</nav>
-<body>
-	<header id="header">This is the header</header>
-	<form action="" method="post" name="contactForm">
+
+	<body>
+		<header id="header"><h1>Welcome to the Abode</h1></header>
+		<nav id="nav">
+			<h2>Navigation</h2>
+			<ul id="navUl">
+				<li><a href="home.html">Home</a>
+				<li><a href="skills.html">Skills</a>
+				<li><a href="contact.html">Contact</a>
+			</ul>
+		</nav>
+		<article> <h2> Contact Information </h2>
+			<table>
+				<tr>
+					<td>Name</td>	
+					<td>Hybrid Salmon</td>	
+				</tr>
+				<tr>
+					<td>Adress</td>
+					<td>Schelde</td>
+				</tr>
+				<tr>
+					<td>E-mail</td>
+					<td>hybridsalmon@gmail.com</td>
+				</tr>
+			</table>
+			<p>You can also just easily mail me through this exquisite form</p>
+		</article>
+		<form action="/contact-form" method="post" name="contactForm" id="contactform">
 		<div>
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="user_name">
@@ -31,11 +50,11 @@
 		<div class="button">
 			<button type="submit">Fly</button>
 		</div>
-	</form>
-	<footer id="footer">
-		<a href="https://github.com/ReinaertD"><img src="https://img.icons8.com/material-sharp/24/000000/github.png" title="GitHub" alt="GitHub"></a>
-		<a href="https://https://www.linkedin.com/in/reinaert-depourcq-8a1168194/"><img src="https://img.icons8.com/color/48/000000/linkedin.png" title="LinkedIn" alt="LinkedIn" height="24px" width="24px"></a>
-</footer>
+		</form>
+		<footer id="footer">
+			<a href="https://github.com/ReinaertD"><img src="assets/github.png" title="GitHub" alt="GitHub"></a>
+			<a href="https://https://www.linkedin.com/in/reinaert-depourcq-8a1168194/"><img src="assets/linkedin.png" title="LinkedIn" alt="LinkedIn" height="24" width="24"></a>
+		</footer>
 
-</body>
+	</body>
 </html>
