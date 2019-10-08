@@ -27,5 +27,33 @@ a {
 	align-content:stretch;
 	list-style-type:none;
 }
+.proficiencies{
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	height:100%
+}
+.proficiencies h2{
+	flex: 0 0 100%;
+}
+.proficiencies ul, p{
+	width:50%;
+	
+}
 
+
+.acquiredSkills {
+	background-color: darkgray;
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	height:100%;
+
+}
+.acquiredSkills h2{
+	flex: 0 0 100%;
+}
+.acquiredSkills article{
+	width:50%
+}
 
