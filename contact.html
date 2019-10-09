@@ -5,18 +5,20 @@
 		<meta name="viewport" content="width=device width, initial-scale=1.0">
 		<title>Contact Information</title>
 		<link rel="shortcut icon" type="image/png" href="assets/top-view-fish.png"/>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/styles.css">
 	</head>
 
 	<body>
-		<header id="header"><h1>Welcome to the Abode</h1></header>
-		<nav id="nav">
+		<nav class="nav">
 			<h2>Navigation</h2>
-			<ul id="navUl">
+			<ul class="navUl">
 				<li><a href="home.html">Home</a>
 				<li><a href="skills.html">Skills</a>
 				<li><a href="contact.html">Contact</a>
 			</ul>
 		</nav>
+		<header id="header"><h1>Welcome to the Abode</h1></header>
 		<article> <h2> Contact Information </h2>
 			<table>
 				<tr>
@@ -32,25 +34,24 @@
 					<td>hybridsalmon@gmail.com</td>
 				</tr>
 			</table>
-			<p>You can also just easily mail me through this exquisite form</p>
 		</article>
+		<div class="contactForm">
+			<h3>You can also just easily mail me through this exquisite form</h3>
 		<form action="/contact-form" method="post" name="contactForm" id="contactform">
 		<div>
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="user_name">
+			<input type="text" id="name" name="user_name" placeholder="Name" required>
 		</div>
 		<div>
-			<label for="mail">E-mail:</label>
-			<input type="email" id="mail" name="user_mail">
+			<input type="email" id="mail" name="user_mail" placeholder="Email" required>
 		</div>
 		<div>
-			<label for="msg">Message:</label>
-			<textarea id="msg" name="user_message"></textarea>
+			<textarea id="msg" name="user_message"  placeholder="Type your message. Gandalf shall deliver it." required></textarea>
 		</div>
 		<div class="button">
-			<button type="submit">Fly</button>
+			<button type="submit">Fly you fools!</button>
 		</div>
 		</form>
+		</div>
 		<footer id="footer">
 			<a href="https://github.com/ReinaertD"><img src="assets/github.png" title="GitHub" alt="GitHub"></a>
 			<a href="https://https://www.linkedin.com/in/reinaert-depourcq-8a1168194/"><img src="assets/linkedin.png" title="LinkedIn" alt="LinkedIn" height="24" width="24"></a>

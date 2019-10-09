@@ -1,7 +1,10 @@
-/* * {outline: 1px solid black}  */
+ /* * {outline: 1px solid black} */
 
 body{
 	background-color: lightgray;
+	margin-left: 20%;
+	margin-right: 20%;
+	
 }
 a {
 	color:blue;
@@ -30,18 +33,31 @@ a {
 h1{
 	text-align:center;
 }
-
+input, button, textarea{
+	border:none;
+}
 footer{
 	text-align: center;
 }
-
+.basicFlex{
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	height:100%
+}
+.basicFlex h2{
+	flex: 0 0 100%;
+}
+.blockQuote{
+	font-weight:bold;
+}
 /* Skills.html page */
 .proficiencies{
 	display:flex;
 	flex-direction:column;
 	justify-content:flex-end;
 }
-.proficiencies h2,p{
+.proficiencies h2, .proficiencies p{
 	align-self:center;
 }
 .proficiencies ul{
@@ -58,13 +74,25 @@ footer{
 	display:flex;
 	flex-direction:row;
 	flex-wrap: wrap;
-	height:100%;
 
 }
-.acquiredSkills h2{
+.acquiredSkills h2, .acquiredSkills h3{
 	flex: 0 0 100%;
+	text-align:center;
 }
 .acquiredSkills article{
-	width:50%
+	flex: 0 0 50%
+}
+/* Contact.html */
+
+.contactForm{
+	background-color: darkgray;
+	padding: 2% 5%
+
+}
+#contactform input, #contactform textarea{
+	width:100%;	
+	background-color:lightgray;
+	margin-bottom:5px;
 }
 
