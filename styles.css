@@ -1,4 +1,4 @@
-/* * {outline: 1px solid black}i */
+/* * {outline: 1px solid black}  */
 
 body{
 	background-color: lightgray;
@@ -27,18 +27,29 @@ a {
 	align-content:stretch;
 	list-style-type:none;
 }
+h1{
+	text-align:center;
+}
+
+footer{
+	text-align: center;
+}
+
+/* Skills.html page */
 .proficiencies{
 	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+}
+.proficiencies h2,p{
+	align-self:center;
+}
+.proficiencies ul{
+	display:flex;
 	flex-direction:row;
-	flex-wrap: wrap;
-	height:100%
-}
-.proficiencies h2{
-	flex: 0 0 100%;
-}
-.proficiencies ul, p{
-	width:50%;
-	
+	justify-content:space-around;
+	align-content:center;
+	list-style-type:none;
 }
 
 
