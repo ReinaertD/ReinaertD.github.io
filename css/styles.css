@@ -1,98 +1,99 @@
- /* * {outline: 1px solid black} */
 
 body{
-	background-color: lightgray;
-	margin-left: 20%;
-	margin-right: 20%;
-	
+	background-color: gray;
+	color: lightgray;
+	font-family:sans-serif;
 }
-a {
-	color:blue;
+
+header{
+	text-align:right;
+	font-weight:bold;
+	font-size: 300%;
+}
+
+nav{
+	background-color: darkgray;
+
+}
+
+.navUl{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+}
+
+ul{
+	list-style-type:none;
+	padding:0px;
+}
+
+a{
 	text-decoration:none;
 }
 
-.nav {
-	background-color: darkgray;
-	display: flex;
-	flex-direction: column;
-	justify-content:flex-end;
-	
-}
-.nav h2:first-child{
-	align-self:center;
-	
-}
-.nav ul{
-	display:flex;
-	flex-direction:row;
-	justify-content:space-around;
-	align-items:flex-end;
-	align-content:stretch;
-	list-style-type:none;
+footer{
+	text-align:center;
 }
 h1{
 	text-align:center;
-}
-input, button, textarea{
-	border:none;
-}
-footer{
-	text-align: center;
+	flex: 0 0 100%;
 }
 .basicFlex{
 	display:flex;
-	flex-direction:row;
-	flex-wrap: wrap;
-	height:100%
-}
-.basicFlex h2{
-	flex: 0 0 100%;
-}
-.blockQuote{
-	font-weight:bold;
-}
-/* Skills.html page */
-.proficiencies{
-	display:flex;
 	flex-direction:column;
-	justify-content:flex-end;
+	align-items:center;
+	justify-content:space-evenly;
+
 }
-.proficiencies h2, .proficiencies p{
-	align-self:center;
-}
-.proficiencies ul{
+
+.listSkills{
 	display:flex;
-	flex-direction:row;
-	justify-content:space-around;
-	align-content:center;
+	flex-direction: row;
 	list-style-type:none;
 }
 
-
-.acquiredSkills {
-	background-color: darkgray;
+.skillsArticles{
 	display:flex;
-	flex-direction:row;
+	flex-direction: row;
+	align-items:center;
 	flex-wrap: wrap;
+	justify-content:space-evenly;
+	margin:0 20%;
+}
+.skillsArticles article{
+	flex: 0 0 50%;
 
 }
-.acquiredSkills h2, .acquiredSkills h3{
-	flex: 0 0 100%;
-	text-align:center;
-}
-.acquiredSkills article{
-	flex: 0 0 50%
-}
-/* Contact.html */
 
-.contactForm{
-	background-color: darkgray;
-	padding: 2% 5%
+.contact{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items:center;
+	justify-content: center;
+}
+iframe, form{
+	padding: 10px;
+}
+input,textarea{
+	outline: none;
+	padding:5%;
+	margin:2%;
+	border:0;
+	width:86%;
 
 }
-#contactform input, #contactform textarea{
-	width:100%;	
-	background-color:lightgray;
-	margin-bottom:5px;
+button{
+	outline:none;
+	display:inline-block;
+	margin:2%;
+	padding:5%;
+	border:0;
+	width:96%;
 }
+
+#intro{
+	margin: 0 20%;
+}
+
 
