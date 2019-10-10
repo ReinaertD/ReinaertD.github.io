@@ -1,0 +1,99 @@
+
+body{
+	background-color: gray;
+	color: lightgray;
+	font-family:sans-serif;
+}
+
+header{
+	text-align:right;
+	font-weight:bold;
+	font-size: 300%;
+}
+
+nav{
+	background-color: darkgray;
+
+}
+
+.navUl{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+}
+
+ul{
+	list-style-type:none;
+	padding:0px;
+}
+
+a{
+	text-decoration:none;
+}
+
+footer{
+	text-align:center;
+}
+h1{
+	text-align:center;
+	flex: 0 0 100%;
+}
+.basicFlex{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:space-evenly;
+
+}
+
+.listSkills{
+	display:flex;
+	flex-direction: row;
+	list-style-type:none;
+}
+
+.skillsArticles{
+	display:flex;
+	flex-direction: row;
+	align-items:center;
+	flex-wrap: wrap;
+	justify-content:space-evenly;
+	margin:0 20%;
+}
+.skillsArticles article{
+	flex: 0 0 50%;
+
+}
+
+.contact{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items:center;
+	justify-content: center;
+}
+iframe, form{
+	padding: 10px;
+}
+input,textarea{
+	outline: none;
+	padding:5%;
+	margin:2%;
+	border:0;
+	width:86%;
+
+}
+button{
+	outline:none;
+	display:inline-block;
+	margin:2%;
+	padding:5%;
+	border:0;
+	width:96%;
+}
+
+#intro{
+	margin: 0 20%;
+}
+
+

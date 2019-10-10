@@ -1,0 +1,107 @@
+ /* * {outline: 1px solid black} */
+
+body{
+	background-color: lightgray;
+	margin-left: 30%;
+	margin-right: 30%;
+	
+}
+a {
+	color:blue;
+	text-decoration:none;
+}
+
+.nav {
+	background-color: darkgray;
+	display: flex;
+	flex-direction: column;
+	justify-content:flex-end;
+	
+}
+.nav h2:first-child{
+	align-self:center;
+	
+}
+.nav ul{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	align-items:flex-end;
+	align-content:stretch;
+	list-style-type:none;
+}
+h1{
+	text-align:center;
+}
+input, button, textarea{
+	border:none;
+}
+footer{
+	text-align: center;
+}
+
+.basicFlex{
+	display:flex;
+	flex-direction:column;
+	flex-wrap: no-wrap;
+	height:100%
+
+}
+.basicFlex h2{
+	flex: 0 0 100%;
+	text-align:center;
+}
+.blockQuote p{
+	text-align:center;
+	font-weight:bold;
+}
+.blockQuote footer{
+	
+	font-style:italic;
+}
+/* Skills.html page */
+.proficiencies{
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+}
+.proficiencies h2, .proficiencies p{
+	align-self:center;
+}
+.proficiencies ul{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	align-content:center;
+	list-style-type:none;
+}
+
+
+.acquiredSkills {
+	background-color: darkgray;
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+
+}
+.acquiredSkills h2, .acquiredSkills h3{
+	flex: 0 0 100%;
+	text-align:center;
+}
+.acquiredSkills article{
+	flex: 0 0 50%
+}
+/* Contact.html */
+
+.contactForm{
+	background-color: darkgray;
+	padding: 5% 10%
+
+}
+#contactform input, #contactform textarea{
+	width:100%;	
+	background-color:lightgray;
+	margin-bottom:5px;
+}
+
+
