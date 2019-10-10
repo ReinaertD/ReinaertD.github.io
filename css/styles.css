@@ -75,6 +75,14 @@ h1{
 iframe, form{
 	padding: 10px;
 }
+
+.backgroundContainer{
+	margin: 5% 35%;
+	border: 1%; 
+	padding: 3%; 
+	background-color: dimgray;
+}
+
 input,textarea{
 	outline: none;
 	padding:5%;
