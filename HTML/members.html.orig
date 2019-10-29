@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+        <meta charset="UTF-8">
+        <title>Becruel</title>
+        <link href="/CSS/members.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+
+<body>
+
+    <header id = "nav">
+        <nav>
+            <div class="logo">
+                <h4>BeCruel.org</h4>
+            </div>
+            <ul class="nav-links">
+                <li>
+                        <a href="/HTML/index.html">Home</a>
+                </li>
+                <li>
+                        <a href="/HTML/Products.html">Products</a>
+                </li>
+                <li>
+                        <a href="#">Members</a>
+                </li>
+                <li>
+                        <a href="/HTML/Contact.html">Contact</a>
+                </li>
+        
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line1"></div>
+                <div class="line1"></div>
+            </div>
+        </nav>
+   </header>
+      
+<!-- members starts -->
+
+  <section class="content-members container-members">
+      <h1>Members</h1>
+    <article class="card">
+        <div class="card1">
+          <img src="/ASSETS/joker.jpg" alt="cards">
+          <h2 class="name">DAVID</h2>
+          <p>Code Commander</p>
+          <p>Battle Field</p>
+        </div>
+
+            <div class="card2">
+              <img src="/ASSETS/joker.jpg" alt="cards">
+              <h2 class="name">CATH</h2>
+              <p>Supreme Chancellor</p>
+              <p>Galactic Empire</p>
+            </div>
+  
+
+            <div class="card3">
+              <img src="/ASSETS/joker.jpg" alt="cards">
+              <h2 class="name">NAOYUKI</h2>
+              <p>Design Slave</p>
+              <p>Galactic Empire</p>
+            </div>
+
+
+
+            <div class="card4">
+              <img src="/ASSETS/joker.jpg" alt="cards">
+              <h2 class="name">REINEART</h2>
+              <p>Bug Crusher</p>
+              <p>Galactic Empire</p>
+              </div>
+    </article>
+  </section>
+
+</div>
+</body>
+</html>

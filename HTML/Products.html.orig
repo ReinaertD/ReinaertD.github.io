@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<title>Products</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href="Navbar_c.css" /> 
+        <link rel="stylesheet" type="text/css" href="Product_c.css" />
+		
+		
+	</head>
+<body>
+    <div class="container">
+            <header id = "nav">
+                    <nav>
+                            <div class="logo">
+                                    <h4>BeCruel.org</h4>
+                        
+                                </div>
+                        <ul class="nav-links">
+                            <li>
+                                    <a href="#">Home</a>
+                            </li>
+                            <li>
+                                    <a href="#">Products</a>
+                            </li>
+                            <li>
+                                    <a href="#">Members</a>
+                            </li>
+                            <li>
+                                    <a href="#">Contact</a>
+                            </li>
+                    
+                        </ul>
+                        <div class="burger">
+                            <div class="line1"></div>
+                            <div class="line1"></div>
+                            <div class="line1"></div>
+                        </div>
+                    </nav>
+               </header>
+            
+                    
+                    <!--------------custumise responsive navbar-
+                        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                                <a class="navbar-brand" href="#">Carousel</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarCollapse">
+                                  <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link disabled" href="#">Disabled</a>
+                                    </li>
+                                  </ul>
+                                  <form class="form-inline mt-2 mt-md-0">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                  </form>
+                                </div>
+                              </nav>-->
+              
+             <!---------------main-->
+            
+            <div class="wrapper">
+                <div class="row">
+                        <div class="item">Global treats</div>
+                        <div class="item">Group treats</div>
+                </div>
+                      <div class="row">
+                            <div class="item">Individual treats</div>
+                            <div class="item">Customise treats</div>    
+                      </div>
+                        
+                    
+                      
+                
+            </div>
+            
+    </div>
+   
+    <!-- Grid 1/4 
+		<div class="grid grid-pad">
+			<div class="col-1-4">
+				<div class="content">
+				</div>
+			</div>
+			<div class="col-1-4">
+				<div class="content">
+				</div>
+			</div>
+			<div class="col-1-4 hide-on-mobile">
+				<div class="content">
+				</div>
+			</div>
+			<div class="col-1-4 hide-on-mobile">
+				<div class="content">
+				</div>
+			</div>
+        </div>-->
+        
+        <!------------------footer-->
+</body>

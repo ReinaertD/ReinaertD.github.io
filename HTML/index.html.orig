@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, intitial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title> Be<Cruel> </title>
+		<link href="../CSS/index.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="index-what" class="index-container">
+		<article class="page">
+			<img src="" alt="Be<Cruel>" />
+			<h1 class="h1-index"> In evil we trust </h1>
+			<p id="index__what"> What we do is ofcourse what we do so this makes sense if not it doesn't matter because this is a placeholder message so it forms a whole ubisquosity of dendruffs</p>
+		</article>
+
+		<a href="#index-services"><img class="skip-button" src="ASSETS/arrow.svg" alt="go down" /></a>
+		</div>
+		<div id="index-services" class="index-container">
+		<article class="page">
+			<img src="" alt="an image of services"/>
+			<h1 class="h1-index">Services</h1>
+			<p class="index__services">We provide many services that a majority might deem criminal, but we do our best to conform to this wretched society.</p>
+			<a class="index__btn" href="services.html">Our services</a>
+
+		</article>
+		<a href="#index-who"><img class="skip-button" src="ASSETS/arrow.svg" alt="go down" /></a>
+		</div>
+		<div id="index-who" class="index-container">
+		<article class="page">
+			<p class="index__who"> This should be a longer text about who we are, just a decent introduction but nothing too long, we're not an evil organization if everyone knows everything about us and I keep writing so I can fill this in because Lore Ipsum is too hipster.</p>
+			<a class="index__btn" href="HTML/Contact.html">Contact us</a>
+			<a class="index__link" href="members.html">Members</a>
+		</article>
+		<a href="#index-what" class="back-button"><img class="skip-button" src="ASSETS/arrow.svg" alt="go down" /></a>
+		</div>
+	</body>
+</html>
