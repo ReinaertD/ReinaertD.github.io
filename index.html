@@ -57,8 +57,179 @@ Table of contents
 
 
 1. What is blockchain?
-A chain of blocks that contain information.(you don’t say).
+The purpose of a blockchain is to allow digital information to be recorded, distributed but NOT edited.
+While Bitcoin made it popular it existed years before that and was called Digital Timestamps.
+It's a file consisting of data blocks where each block that gets added to it receives a unique fingerprint AND the fingerprint of the last added block. 
+Still very ambiguous so I'll try to explain it a bit by using some code to make a simplified blockchain.
 
-The goal of blockchain is to allow digital information to be recorded, distributed but NOT edited.
+We start first with the building block of the blockchain, the block. What is a block exactly and what does it contain? It's a container of a couple of things. 
+It consists of 2 parts. The block header and the block body. 
+	You can compare it to an HTML file, the head contains the metadata and the body the content.
+
+	The block body contains the data.(in case of Bitcoin it is a list of transactions);
+	The block header must at least have 
+				1) hash of the previous block
+				2) hash of the current block(a hash is encrypted information);
+				but in every use of blockchain it has much more items inside the header.
+
+Let's pretend that BeCode assigns the coaches evaluate us and they want to use blockchain so information can't be changed to avoid students trying to bribe the coaches. So first we make a class called Block.
+============================================================================
+////SECOND THIS//////////
+const SHA256 = require('crypto-js/sha256');
+//////////FIRST THIS/////////
+class Block{
+    constructor(index, timestamp, data, previousHash = ''){
+        this.index = index;
+        this.timestamp = timestamp;
+        this.data = data;
+        this.previousHash = previousHash;
+        this.hash = this.calculateHash();
+
+    }
+////////THIRD THIS/////////
+    calculateHash(){
+        return SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data)).toString();
+    }
+}
+//////FIRST THIS TEXT//////
+To make the block we use a constructor and give it requirements to what it needs to be created.
+We have 	an index, just to know the location in the chain.
+		a timestamp, to see WHEN the block was added.
+		data, in this case evaluation of the class.
+		previousHash, it's an encrypted string of the previous block.
+		hash, the hash of the current black.
+Most of this is self-evident, except the hash. Hash it just a way of encrypting information.
+////SECOND THIS/////
+We have to import javascript stuff to be able to encrypt. 
+In the block we also make a function to calculate the hash. As you can see it takes the parameters including the previous hash and makes it a new hash.
+
+==============================================================================
+We made the blueprint of the block and now it is time for the chain. We'll call it Blockchain just to be original.
+////////////////////////////////FIRST THIS//////////////////////////////////
+class Blockchain{
+    constructor(){
+        this.chain = [this.createGenesisBlock()];
+    }
+
+    createGenesisBlock(){
+        // Genesis block has no previous block so the 'previous hash' can be anything
+        return new Block(0, "10/11/2019", "Genesis block", "0");
+    }
+
+    getLatestBlock(){
+        return this.chain[this.chain.length - 1];
+    }
+
+    addBlock(newBlock){
+        newBlock.previousHash = this.getLatestBlock().hash;
+        newBlock.hash = newBlock.calculateHash();
+        this.chain.push(newBlock);
+    }
+//////////////////////////////////////////////////////SECOND THIS////////////////////////
+    isChainValid(){
+        for(let i = 1; i < this.chain.length; i++){
+            const currentBlock = this.chain[i];
+            const previousBlock = this.chain[i-1];
+
+            if(currentBlock.hash !== currentBlock.calculateHash()){
+                return false;
+            }
+
+            if(currentBlock.previousHash !== previousBlock.hash){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+//////////////////////FIRST THIS//////////////////
+So inside the class Blockchain we make a couple of functions.
+First, again, is the constructor. We tell it that when a blockchain gets the GenesisBlock should be the first block in it.
+What is the GenesisBlock? It is the first block of a chain and it is automaticaly created. It's unique because it doesn't have a previous hash. That''s why it must be created first. 
+Then we have a function which calls the last added block of the chain.
+And finally the addBlock function. In this we have the possibility to add blocks to our chain.
+It gets the hash from the last added block and uses it to calculate the new hash. When the hash is calculated it gets added to the chain.
+
+Let''s create the blockchain evaluation now.
+	let evaluationChain = new Blockchain();
+The chain has been created but only contains the genesisblock with no evaluation data in it, so let''s add a couple of blocks.
+
+evaluationChain.addBlock(new Block(1,"12/11/2019", { greatestPersonInClass: "Reinaert" } ));
+
+evaluationChain.addBlock(new Block(2,"13/11/2019", { leastFunnyPersonInClass: "Nijst" } ));
+
+evaluationChain.addBlock(new Block(3,"15/11/2019", { javaMeister: "Claas"  } ));
+
+The hashes are made in the functions so the only parameters we need to add is the index, timestamp, and the evaluationdata.
+
+////// SHOW THE RESULT OF CONSOLE LOG 
+console.log(JSON.stringify(evaluationChain, null, 4));
+/////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HASH GENERATOR : https://passwordsgenerator.net/sha256-hash-generator/
+Stuart Haber and Scott Stornetta's paper: https://www.anf.es/pdf/Haber_Stornetta.pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ----- PAGES
 
