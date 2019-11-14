@@ -7,9 +7,8 @@
 Table of contents
 
 1. What is blockchain?
-2. What is it used for?
-3. What are the positives and negatives?
-4. Uses of blockchain(beside cryptocurrency which Rico talked about)
+2. P2P network
+3. Mining
 
 
 1. What is blockchain?
@@ -90,7 +89,7 @@ class Blockchain{
             if(currentBlock.hash !== currentBlock.calculateHash()){
                 return false;
             }
-
+///////////////////////////////////////////THIRD THIS///////////////////////////////////
             if(currentBlock.previousHash !== previousBlock.hash){
                 return false;
             }
@@ -122,10 +121,37 @@ The hashes are made in the functions so the only parameters we need to add is th
 ////// SHOW THE RESULT OF CONSOLE LOG 
 console.log(JSON.stringify(evaluationChain, null, 4));
 /////
+///////////////////SECOND THIS////////////
+Nijst found out about this evaluation, so he decides to change it.
+He doesn't want to be known as the least funny person so he use his hackerman skills by typing this
+        evaluationChain.chain[2].data = { leastFunnyPersonInClass: "Erin"};
+---
+Q: What happens?
+Nothing, so we make a function that recalculates the hash of a block when called upon and compares it to the existing hash.
+        console.log('Is blockchain valid? ' + evaluationChain.isChainValid());
+Q: And now?
+It returns false because the content has been changed inside so when you recalculate the hash it shows a different one.
+---
+Ofcourse this Nijst person is smart, so he also recalculates and change the hash.
+---
+evaluationChain.chain[2].hash = evaluationChain.chain[2].calculateHash();
+        console.log('Is blockchain valid? ' + evaluationChain.isChainValid());
+---
+It returns true. So that's no good either. That's why we'll add a bit more code to the isChainValid function
+////////////////////////////////////////THIRD THIS////////////////////////////:
+Now that it's added let's check it again!
+        console.log('Is blockchain valid? ' + evaluationChain.isChainValid());
+It isn't valid again! Hooray!
+=======================================================================================
 
-
-
-/////////////////////////IGNORE UNDER THIS////
+2. P2P Network
+It'll still be possible to change data but you'll have to recalculate every hash of every block that comes after the one you changed.
+As an extra security measure you can make use of a P2P network.
+In the case of bitcoin everyone is free to join it, and you can become a node. Every node on the network is equal to one another. It doesn't matter if you just joined or if you're the oldest node.
+To qualify as a node you need to have a copy from the blockchain(243GB atm). After that you become a part of the network.
+What this network does is make it safer
+(1) since it's a decentralized system. If 1 node goes down there will still be a lot of other nodes.
+(2) if a node is corrupted it will be ignored till it's correct again.
 
 
 
