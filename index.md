@@ -159,35 +159,52 @@ To be able to force a change you'll need to have control of more than 50% of the
 
 =========================================================================================
 3. Mining
+(in case of bitcoin)
+The purpose of mining is to reach a secure, tamper-resistant consensus and to introduce new bitcoins to the system.
+Data, or in this case transactions, aren't automatically added. They are passed through all the nodes and if they are invalid they get ignored.
+If they're valid they stay in the node till a block is mined. 
+To avoid blocks being added every second 2 things are added, a difficulty(called the target) and a nonce(variable that gets changed). The difficulty gets changed so that each block will be added at the same interval. 
+A difficulty is a variable that decides what the hash of a block needs to have to be added to the chain.
+To make a simple example. 
+ The target(difficulty) for the 100,000th block of Bitcoin was:
+ 	000000000004864c000000000000000000000000000000000000000000000000
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+We need to be under that number. So we can try it.
 
 HASH GENERATOR : https://passwordsgenerator.net/sha256-hash-generator/
+
+The bitcoin network at that time required around 10 minutes to find that hash. So it takes a lot of computing power.
+------------------------------------
+What I described in P2P and Mining is for the consensus model of Proof-of-work.
+I won't go any further except that there are others, but this one is the most used and the most basic.
+The way of doing the mining isn't exactly eco-friendly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Stuart Haber and Scott Stornetta's paper: https://www.anf.es/pdf/Haber_Stornetta.pdf
 
 
