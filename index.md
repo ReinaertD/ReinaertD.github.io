@@ -1,6 +1,8 @@
 (The parts with code will be done with slides, /////FIRST THIS//// will appear first, and under that part of code ///FIRST THIS/// will be the dialog,
 ////SECOND THIS//// will be added to the slide after I've talked about the previous part of the code)
 
+This will also be dumbed down because of the lack of time in the presentation but should still be correct however
+
 
 
 ----- DOC
@@ -147,13 +149,16 @@ It isn't valid again! Hooray!
 2. P2P Network
 It'll still be possible to change data but you'll have to recalculate every hash of every block that comes after the one you changed.
 As an extra security measure you can make use of a P2P network.
-In the case of bitcoin everyone is free to join it, and you can become a node. Every node on the network is equal to one another. It doesn't matter if you just joined or if you're the oldest node.
+In the case of bitcoin everyone is free to join it, and you can become a node. There are different kind of nodes and for the sake of brevity I will keep it simple. Every node on the network is equal to one another. It doesn't matter if you just joined or if you're the oldest node.
 To qualify as a node you need to have a copy from the blockchain(243GB atm). After that you become a part of the network.
 What this network does is make it safer
 (1) since it's a decentralized system. If 1 node goes down there will still be a lot of other nodes.
 (2) if a node is corrupted it will be ignored till it's correct again.
 
+To be able to force a change you'll need to have control of more than 50% of the nodes. This is referred to as a 51% attack. 
 
+=========================================================================================
+3. Mining
 
 
 
