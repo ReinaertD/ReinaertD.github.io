@@ -248,6 +248,10 @@ function gameLogic(playerAction){
 	defendBtn.addEventListener("click", function(){
 		gameLogic("defend");
 	});
+  let insultRequest = await fetch(`https://insult.mattbas.org/api/insult`);
+                let insult = await insultRequest.json();
+                console.log(insult);
+
 
 
 })();
