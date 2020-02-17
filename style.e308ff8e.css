@@ -8,7 +8,11 @@ body {
   font-size: 16px;
 }
 
-h1, h2, p {
+i {
+  font-style: italic;
+}
+
+h1, h2, p, label {
   padding: 1rem;
 }
 
@@ -76,6 +80,16 @@ input, textarea, p, label {
   font-size: 18px;
   margin-bottom: 20px;
   background-color: #C4C4C4;
+  transition-duration: 0.4s;
+}
+
+.buttn-success {
+  border: none;
+  padding: 15px 32px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  background-color: green;
+  color: white;
   transition-duration: 0.4s;
 }
 
@@ -169,6 +183,7 @@ input, textarea, p, label {
   min-width: 200px;
 }
 .about .about-facts {
+  margin: 1rem;
   padding: 1rem;
   background-color: #C4C4C4;
 }
@@ -204,7 +219,7 @@ input, textarea, p, label {
   max-width: 15rem;
   background-color: #F4F4F4;
   margin: 0 1rem;
-  padding: 12px;
+  padding: 1rem;
 }
 
 #message {
@@ -212,7 +227,14 @@ input, textarea, p, label {
   min-height: 5rem;
   background-color: #F4F4F4;
   margin: 0 1rem;
-  padding: 12px;
+  padding: 1rem;
+}
+
+.error {
+  display: table;
+  background-color: lightblue;
+  margin: 0.5rem 1rem;
+  padding: 1rem;
 }
 
 @media (min-width: 640px) {
