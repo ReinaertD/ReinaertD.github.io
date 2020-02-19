@@ -31730,7 +31730,9 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"Components/About/About.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"Components/pictureSideView.jpg":[function(require,module,exports) {
+module.exports = "/pictureSideView.8061d4d4.jpg";
+},{}],"Components/About/About.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31739,6 +31741,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _pictureSideView = _interopRequireDefault(require("../pictureSideView.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31750,7 +31754,8 @@ var English = function English() {
   }, _react.default.createElement("h2", null, " Hello this is about me"), _react.default.createElement("p", null, " qem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui purus, ultricies eu rutrum ac, feugiat non nunc. Duis hendrerit placerat efficitur. Pellentesque in molestie libero. Aenean ut tristique sem. Phasellus auctor sit amet ante pharetra luctus. Maecenas maximus semper congue. Suspendisse consectetur risus in erat volutpat porta. Quisque tristique facilisis turpis, quis ultrices ligula tincidunt quis.")), _react.default.createElement("div", {
     className: "about-picture"
   }, _react.default.createElement("img", {
-    alt: "me looking at you again"
+    src: _pictureSideView.default,
+    alt: "picture of me looking at you again"
   })), _react.default.createElement("p", {
     className: "about-history"
   }, " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui purus, ultricies eu rutrum ac, feugiat non nunc. Duis hendrerit placerat efficitur. Pellentesque in molestie libero. Aenean ut tristique sem. Phasellus auctor sit amet ante pharetra luctus. Maecenas maximus semper congue. Suspendisse consectetur risus in erat volutpat porta. Quisque tristique facilisis turpis, quis ultrices ligula tincidunt quis."), _react.default.createElement("div", {
@@ -31768,9 +31773,10 @@ var Nederlands = function Nederlands() {
     className: "content-item about"
   }, _react.default.createElement("div", {
     className: "about-intro"
-  }, _react.default.createElement("h2", null, " Deze pagina gaat over mij, HEYOOOO!"), _react.default.createElement("p", null, " qem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui purus, ultricies eu rutrum ac, feugiat non nunc. Duis hendrerit placerat efficitur. Pellentesque in molestie libero. Aenean ut tristique sem. Phasellus auctor sit amet ante pharetra luctus. Maecenas maximus semper congue. Suspendisse consectetur risus in erat volutpat porta. Quisque tristique facilisis turpis, quis ultrices ligula tincidunt quis.")), _react.default.createElement("div", {
+  }, _react.default.createElement("h2", null, " Deze pagina gaat over mij, nog altijd veel werken aan!"), _react.default.createElement("p", null, " qem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui purus, ultricies eu rutrum ac, feugiat non nunc. Duis hendrerit placerat efficitur. Pellentesque in molestie libero. Aenean ut tristique sem. Phasellus auctor sit amet ante pharetra luctus. Maecenas maximus semper congue. Suspendisse consectetur risus in erat volutpat porta. Quisque tristique facilisis turpis, quis ultrices ligula tincidunt quis.")), _react.default.createElement("div", {
     className: "about-picture"
   }, _react.default.createElement("img", {
+    src: _pictureSideView.default,
     alt: "me looking at you again"
   })), _react.default.createElement("p", {
     className: "about-history"
@@ -31792,7 +31798,7 @@ var About = function About(props) {
 
 var _default = About;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"Components/Blog/BlogPost.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../pictureSideView.jpg":"Components/pictureSideView.jpg"}],"Components/Blog/BlogPost.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33876,7 +33882,7 @@ var Contact = function Contact(props) {
       representsCompany = _useState2[0],
       setRepresentation = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(false),
+  var _useState3 = (0, _react.useState)("Send Message"),
       _useState4 = _slicedToArray(_useState3, 2),
       formSent = _useState4[0],
       sendForm = _useState4[1];
@@ -33888,7 +33894,7 @@ var Contact = function Contact(props) {
 
   var onSubmit = function onSubmit(values) {
     // WHAT SHOULD HAPPEN WHEN FORM IS SUBMIT!
-    sendForm(true);
+    sendForm("Message Sent");
     console.log(values);
   };
 
@@ -33920,9 +33926,9 @@ var Contact = function Contact(props) {
   }), errors.email ? _react.default.createElement("p", {
     className: "error"
   }, "A valid email is required.") : false, _react.default.createElement("label", {
-    htmlFor: "name"
-  }, props.lang === "en" ? "Name" : "Naam"), _react.default.createElement("input", {
-    id: "name",
+    htmlFor: "firstName"
+  }, props.lang === "en" ? "Given name" : "Voornaam"), _react.default.createElement("input", {
+    id: "firstName",
     className: "contact-input",
     ref: register({
       required: true,
@@ -33930,15 +33936,30 @@ var Contact = function Contact(props) {
       maxLength: 40,
       pattern: /^[A-Za-z]+$/i
     }),
-    name: "name",
-    placeholder: "Edwardo El Examplare"
+    name: "firstName",
+    placeholder: "Edwardo"
+  }), errors.name ? _react.default.createElement("p", {
+    className: "error"
+  }, "\"A form needs a name\"- Jaqen H'ghar. Maximum 40 letters.") : false, _react.default.createElement("label", {
+    htmlFor: "lastName"
+  }, props.lang === "en" ? "Surname" : "Familienaam"), _react.default.createElement("input", {
+    id: "lastName",
+    className: "contact-input",
+    ref: register({
+      required: true,
+      minLength: 2,
+      maxLength: 40,
+      pattern: /^[A-Za-z]+$/i
+    }),
+    name: "lastName",
+    placeholder: "Mustardman"
   }), errors.name ? _react.default.createElement("p", {
     className: "error"
   }, "\"A form needs a name\"- Jaqen H'ghar. Maximum 40 letters.") : false, _react.default.createElement("label", {
     htmlFor: "company"
   }, props.lang === "en" ? "Company" : "Bedrijf"), _react.default.createElement("label", {
     htmlFor: "companyRepresent",
-    className: "contact-input"
+    className: "contact-input-company"
   }, _react.default.createElement("input", {
     type: "checkbox",
     id: "companyRepresented",
@@ -33947,7 +33968,7 @@ var Contact = function Contact(props) {
     value: representsCompany,
     checked: representsCompany,
     onChange: companySwitch
-  }), "I represent a company"), representsCompany ? _react.default.createElement("input", {
+  }), props.lang === "en" ? "I represent a company" : "Ik vertegenwoordig een bedrijf"), representsCompany ? _react.default.createElement("input", {
     id: "company",
     className: "contact-input",
     ref: register({
@@ -33968,13 +33989,13 @@ var Contact = function Contact(props) {
       minLength: 50,
       maxLength: 3000
     }),
-    placeholder: props.lang == "en" ? "This isn't even my final form!" : "Ik wil je een bericht achterlaten. Hopelijk is het niet dat dat je wou zeggen. "
+    placeholder: props.lang == "en" ? "This isn't even my final form!" : "Ik wil je een bericht achterlaten. (Hopelijk is het niet dat dat je wou zeggen.)*ed "
   }), errors.message ? _react.default.createElement("p", {
     className: "error"
   }, "A message is required! Minimum 50 letters, maximum 3000 letters.") : false, _react.default.createElement("button", {
     type: "submit",
-    className: formSent ? "buttn-success" : "buttn"
-  }, "Send message"), errors.name || errors.email || errors.message ? _react.default.createElement("p", {
+    className: formSent == "Message Sent" ? "buttn-success" : "buttn"
+  }, formSent), errors.name || errors.email || errors.message ? _react.default.createElement("p", {
     className: "error"
   }, "Filled information isn't valid. Fix the errors, or don't. I can't tell you what to do.") : false));
 };
@@ -33998,7 +34019,7 @@ var Home = function Home(props) {
     className: "content home"
   }, _react.default.createElement("article", {
     className: "content-item welcome"
-  }, _react.default.createElement("h1", null, props.lang === "en" ? "Welcome" : "Welkom!"), _react.default.createElement("p", null, "Lorem ipsum alea figat con promotore esset Stijnos con Stevos fightero con falenciados con primos orotores flagule dulce."), _react.default.createElement("a", {
+  }, _react.default.createElement("h1", null, props.lang === "en" ? "Welcome" : "Welkom!"), _react.default.createElement("p", null, "Still a work in progress. Come back in 2 weeks or so."), _react.default.createElement("a", {
     href: "/contact#content",
     className: "buttn"
   }, props.lang === "en" ? "Get in touch" : "Contacteer mij")), _react.default.createElement("article", {
@@ -34030,7 +34051,12 @@ var Portfolio = function Portfolio(props) {
     className: "content portfolio"
   }, _react.default.createElement("div", {
     className: "content-item blogPost"
-  }, _react.default.createElement("h2", null, " Hello this is portfolio"), _react.default.createElement("p", null, " No, this is Patrick...I mean, under construction.")));
+  }, _react.default.createElement("h2", null, " Hello this is portfolio"), _react.default.createElement("p", null, " No, this is Patrick...I mean, under construction.")), _react.default.createElement("div", {
+    className: "content-item"
+  }, _react.default.createElement("h2", null, "Travel map"), _react.default.createElement("p", null, "This was a test so see how I could manipulate an .svg file. This site would be for world travellers. It will make use of a CMS to add photos and blog posts to a country you visited."), _react.default.createElement("a", {
+    className: "links",
+    href: "https://reinaertd.github.io/worldmapprototype/"
+  }, "Just a tryout to see how it works online. Ignore.")));
 };
 
 var _default = Portfolio;
@@ -34053,13 +34079,15 @@ var Topbar = function Topbar() {
   }, _react.default.createElement("div", {
     className: "logo-image"
   }, _react.default.createElement("img", {
-    alt: "logo"
+    alt: ""
   })));
 };
 
 var _default = Topbar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"Components/Avatar.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"Components/pictureFrontViewRect.jpg":[function(require,module,exports) {
+module.exports = "/pictureFrontViewRect.e56c46b4.jpg";
+},{}],"Components/Avatar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34069,23 +34097,24 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _pictureFrontViewRect = _interopRequireDefault(require("./pictureFrontViewRect.jpg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Avatar = function Avatar() {
-  return _react.default.createElement("div", {
-    className: "avatar"
-  }, _react.default.createElement("div", {
-    className: "avatar-image"
-  }, _react.default.createElement("img", {
-    alt: "My face judging the person visiting this site"
-  })), _react.default.createElement("div", {
-    className: "avatar-name"
-  }, "Reinaert"));
+  return (// <div className="avatar">
+    //     <div className="avatar-image">
+    //         <img className="avatar-image-img" src={pictureFrontViewResize} alt="My face judging the person visiting this site"></img>
+    //     </div>
+    //     <div className="avatar-name">Reinaert</div>
+    // </div>
+    _react.default.createElement("div", null)
+  );
 };
 
 var _default = Avatar;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"Components/Colortheme.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./pictureFrontViewRect.jpg":"Components/pictureFrontViewRect.jpg"}],"Components/Colortheme.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38202,6 +38231,8 @@ var App = function App() {
   }), _react.default.createElement("div", {
     id: "content"
   }, _react.default.createElement("div", {
+    className: "statusBarParent"
+  }, _react.default.createElement("div", {
     className: "statusBar"
   }, _react.default.createElement("button", {
     className: lang === "en" ? "lang is-active" : "lang",
@@ -38213,7 +38244,7 @@ var App = function App() {
     onClick: function onClick() {
       return setLang("nl");
     }
-  }, "Nederlands")), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  }, "Nederlands"))), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/about"
   }, _react.default.createElement(_About.default, {
     lang: lang
@@ -38265,7 +38296,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35063" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44417" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

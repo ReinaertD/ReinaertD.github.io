@@ -38,6 +38,7 @@ input, textarea, p, label {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: #B5B2B2;
 }
 
 .topBar {
@@ -47,6 +48,7 @@ input, textarea, p, label {
   justify-content: center;
 }
 .topBar .logo-image {
+  padding: 10px;
   min-width: 60px;
   min-height: 60px;
 }
@@ -97,9 +99,25 @@ input, textarea, p, label {
   background-color: #EBE6E6;
 }
 
+.avatar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .avatar .avatar-image {
-  min-height: 100px;
-  min-width: 100px;
+  align-self: center;
+  display: block;
+  text-align: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  max-width: 12rem;
+  max-height: 12rem;
+}
+.avatar .avatar-image img {
+  border-radius: 30px;
+  overflow: hidden;
+  height: 100%;
+  width: auto;
 }
 
 .links {
@@ -112,6 +130,10 @@ input, textarea, p, label {
 
 .is-active {
   background-color: #F4F4F4;
+}
+
+.statusBarParent {
+  background-color: #B5B2B2;
 }
 
 .statusBar {
@@ -175,12 +197,15 @@ input, textarea, p, label {
   justify-content: center;
 }
 .about .about-picture {
-  display: flex;
+  max-height: 30rem;
+  max-width: 20rem;
+  display: block;
+  margin: 1rem;
 }
 .about .about-picture img {
   text-align: center;
-  min-height: 200px;
-  min-width: 200px;
+  height: 100%;
+  width: auto;
 }
 .about .about-facts {
   margin: 1rem;
@@ -243,6 +268,57 @@ input, textarea, p, label {
     max-width: 1200px;
     margin: auto;
     margin-top: 30px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .content-item {
+    -webkit-box-shadow: 3px 5px 16px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 5px 16px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 5px 16px -10px rgba(0, 0, 0, 0.75);
+  }
+
+  .navLinks {
+    padding-left: 10px;
+  }
+
+  .navLink {
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  .is-active {
+    -webkit-box-shadow: 5px 9px 5px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 9px 5px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 9px 5px -7px rgba(0, 0, 0, 0.75);
+  }
+
+  content {
+    border-radius: 0 0 0 20px;
+  }
+
+  .contact-input, #message, .buttn, .buttn-success, .buttn:active, .buttn:hover, .content-item, .about-facts, .links {
+    border-radius: 10px;
+  }
+
+  .contact-input-company {
+    max-width: 15rem;
+    margin: 0 1rem;
+    padding: 1rem;
+    background-color: #F4F4F4;
+    transition-delay: 0.3 background-color ease;
+  }
+
+  #companyRepresented[value=true] .contact-input-company {
+    background-color: red;
+  }
+
+  .statusBar {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
   }
 
   #content {
@@ -251,6 +327,7 @@ input, textarea, p, label {
 
   .navBar {
     flex: 0 0 15%;
+    padding-top: 1rem;
     min-height: 80vh;
     justify-content: flex-start;
   }
@@ -265,6 +342,10 @@ input, textarea, p, label {
 
   .home {
     flex-direction: row;
+  }
+
+  .welcome {
+    flex: 0 0 97%;
   }
 
   .about-intro {
