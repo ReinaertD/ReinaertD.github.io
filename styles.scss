@@ -1,7 +1,13 @@
-a{
+a , a:visited{
     text-decoration:none;
     color:black;
 }
 
-.icons{
+.fa-at{
+    font-weight: bold;
+}
+
+.title{
+    visibility: hidden;
+    width:0px;
 }
