@@ -3,11 +3,31 @@ a , a:visited{
     color:black;
 }
 
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
 .fa-at{
     font-weight: bold;
 }
 
+.icons{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.icon{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
 .title{
     visibility: hidden;
-    width:0px;
 }
