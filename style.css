@@ -8,7 +8,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 1280px;
   background-color: black;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -38,6 +37,7 @@ body {
 
 .fa {
   font-size: 64px;
+  text-shadow: 2px 2px 8px #FFF;
 }
 
 .fa-at {
@@ -61,6 +61,7 @@ hr {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .icon {
@@ -79,8 +80,21 @@ hr {
 }
 
 @media (max-width: 600px) {
-  .icons {
-    flex-direction: column;
+  #background {
+    width: 200%;
+    height: 100%;
+  }
+
+  #headers {
+    margin-top: 0%;
+  }
+
+  .even {
+    color: #00cba9;
+  }
+
+  .icon {
+    flex: 0 0 50%;
   }
 }
 @media (min-width: 600px) {
