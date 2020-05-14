@@ -24,7 +24,7 @@ body {
   margin-right: 0;
   margin-bottom: 0;
   z-index: -2;
-  background-position: right bottom;
+  background-position: bottom;
 }
 
 .even {
@@ -37,6 +37,8 @@ body {
 
 .fa {
   font-size: 64px;
+  -webkit-text-shadow: 2px 2px 8px #FFF;
+  -moz-text-shadow: 2px 2px 8px #fff;
   text-shadow: 2px 2px 8px #FFF;
 }
 
@@ -86,15 +88,31 @@ hr {
   }
 
   #headers {
-    margin-top: 0%;
+    margin-top: 10%;
   }
 
   .even {
     color: #00cba9;
   }
 
+  .icons {
+    margin-top: 20%;
+  }
+
   .icon {
     flex: 0 0 50%;
+  }
+
+  .fc2 {
+    order: 3;
+  }
+
+  .fc3 {
+    order: 4;
+  }
+
+  .fc4 {
+    order: 2;
   }
 }
 @media (min-width: 600px) {
@@ -102,8 +120,32 @@ hr {
     height: 95%;
   }
 
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
   .icon {
-    padding-inline: 30px;
+    margin-inline: 30px;
+  }
+
+  .fa {
+    transition-delay: 0.05s;
+  }
+
+  .uneven:hover {
+    -webkit-text-shadow: 2px 2px 16px #000;
+    -moz-text-shadow: 2px 2px 16px #000;
+    text-shadow: 4px 4px 2px #000;
+  }
+
+  .even:hover {
+    -webkit-text-shadow: 2px 2px 16px #fff;
+    -moz-text-shadow: 2px 2px 16px #fff;
+    text-shadow: 4px 4px 2px #fff;
   }
 
   body {
