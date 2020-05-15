@@ -27,7 +27,7 @@ body{
     background: url(assets/wave.svg);
     opacity : 1;
     height: 50%;
-    width: 100%;
+    width: 100vw;
     position : absolute;
     background-repeat: no-repeat;
     right: 0px;
@@ -55,7 +55,7 @@ body{
 }
 
 #headers{
-    margin-top: 11%;
+    margin-top: 10rem;
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -88,27 +88,61 @@ hr{
     visibility: hidden;
 }
 
-@media (max-width: 600px) { 
+@media(max-width:400px){
+
+    h1,h2{
+        text-align:center;
+    }
     #background{
-        width:200%;
+        width:300%;
         height:100%;
     }
     #headers{
-        margin-top: 10%;
+        margin-top: 0;
     }
     .even{
         color:$textcolorAlt;
     }
-    .icons{
-        margin-top:15%;
-    }
+  
     .icon{
         flex: 0 0 50%;
     }
 
     .fa{
         font-size:80px;
-        padding:20px;
+        padding:10px;
+    }
+
+    .fc2{
+        order:3;
+    }
+    .fc3{
+        order:4;
+    }
+    .fc4{
+        order:2;
+    }
+}
+
+@media (min-width:401px) and (max-width: 600px) { 
+    #background{
+        width:400%;
+        height:100%;
+    }
+    #headers{
+        margin-top: 7rem;
+    }
+    .even{
+        color:$textcolorAlt;
+    }
+  
+    .icon{
+        flex: 0 0 50%;
+    }
+
+    .fa{
+        font-size:80px;
+        padding:10px;
     }
 
     .fc2{
@@ -121,9 +155,25 @@ hr{
         order:2;
     }
  }
+
+ h1{
+     font-size: 48px;
+ }
+ h2{
+     font-size:36px;
+ }
+
+ @media(min-width:600px) and (max-width:1000px){
+     #background{
+         width:200%;
+         height:300%;
+
+     }
+ }
+
 @media (min-width: 600px) { 
     html{
-        height:95%;
+        height:100vh;
     }
     
     h1{
@@ -134,9 +184,13 @@ hr{
         font-size:36px;
     }
 
+
     .icon{
         margin-left:30px;
         margin-right:30px;
+    }
+    .icons{
+        margin-bottom: 1rem;
     }
 
     .fa{
@@ -154,11 +208,8 @@ hr{
         text-shadow: 4px 4px 2px #fff;
     }
 
-    body{
-        height:100%;
-    }
     .wrapper{
+        height:100vh;
         justify-content:space-between;
-
     }
  }
