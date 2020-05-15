@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #background {
@@ -93,11 +93,16 @@ hr {
   }
 
   .icons {
-    margin-top: 20%;
+    margin-top: 15%;
   }
 
   .icon {
     flex: 0 0 50%;
+  }
+
+  .fa {
+    font-size: 80px;
+    padding: 20px;
   }
 
   .fc2 {

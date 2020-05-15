@@ -11,13 +11,17 @@ a , a:visited, h1,h2,title{
 
 
 body{
+    background-color: $backgroundcolor;
+    font-family: "Roboto",sans-serif;
+}
+
+.wrapper{
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background-color: $backgroundcolor;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 
 #background{
     background: url(assets/wave.svg);
@@ -96,10 +100,15 @@ hr{
         color:$textcolorAlt;
     }
     .icons{
-        margin-top:20%;
+        margin-top:15%;
     }
     .icon{
         flex: 0 0 50%;
+    }
+
+    .fa{
+        font-size:80px;
+        padding:20px;
     }
 
     .fc2{
@@ -147,6 +156,9 @@ hr{
 
     body{
         height:100%;
+    }
+    .wrapper{
         justify-content:space-between;
+
     }
  }
